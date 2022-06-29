@@ -1,0 +1,15 @@
+// 多行文本隐藏
+@mixin text-overflow($n) {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: $n;
+	line-clamp: $n;
+	text-overflow: ellipsis;
+	-webkit-box-orient:vertical;
+}
+// 单行文本隐藏
+@mixin text_signer_line{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+}
