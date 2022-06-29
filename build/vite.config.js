@@ -2,6 +2,7 @@ const { resolve } = require('path');
 const { defineConfig } = require('vite');
 const vue = require('@vitejs/plugin-vue');
 const eslintPlugin = require('@nabla/vite-plugin-eslint');
+const postcssConfig = require('./postcss.config');
 module.exports = defineConfig({
     build: {
         outDir: './dist',
@@ -20,6 +21,9 @@ module.exports = defineConfig({
         //     }
         // })
     ],
+    css: {
+        postcss: postcssConfig
+    },
     resolve: {
         alias: {
             '~assets': resolve(__dirname, '../src/assets'),
